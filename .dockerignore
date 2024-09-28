@@ -1,0 +1,43 @@
+# Exclude Git files
+.git
+.gitignore
+
+# Exclude Docker files
+Dockerfile
+docker-compose.yml
+
+# Exclude readme and documentation
+README.md
+CHANGELOG.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
+LICENSE
+docs/
+
+# Exclude development and testing files
+.env
+.env.example
+.vscode/
+.venv/
+.idea/
+__pycache__/
+*.pyc
+node_modules/
+coverage/
+tests/
+notebooks/
+
+# Exclude data files
+data/
+
+# Exclude logs
+logs/
+
+# Exclude OS-specific files
+.DS_Store
+Thumbs.db
+
+# Exclude other unnecessary files
+*.swp
+*.swo

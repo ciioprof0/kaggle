@@ -1,0 +1,71 @@
+# .github/workflows/ci.yml
+
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t myapp:latest .
+
+      - name: Run Docker container
+        run: docker run --rm myapp:latest
+
+# --------------------------------------------------------
+## Examples for specific languages (uncomment and modify as needed)
+
+## Example for Python
+#
+# jobs:
+#   build-and-run:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+#
+#       - name: Build Docker image
+#         run: docker build -t myapp:latest .
+#
+#       - name: Run Docker container
+#         run: docker run --rm myapp:latest
+
+## Example for C/C++
+#
+# jobs:
+#   build-and-run:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+#
+#       - name: Build Docker image
+#         run: docker build -t myapp:latest .
+#
+#       - name: Run Docker container
+#         run: docker run --rm myapp:latest
+
+## Example for x86/64 Assembly (NASM)
+#
+# jobs:
+#   build-and-run:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+#
+#       - name: Build Docker image
+#         run: docker build -t myapp:latest .
+#
+#       - name: Run Docker container
+#         run: docker run --rm myapp:latest

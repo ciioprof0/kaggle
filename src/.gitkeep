@@ -1,0 +1,5 @@
+File Purpose: To ensure that Git/GitHub tracks this otherwise empty directory.
+Git does not track empty directories, so we include this optional file so that
+directory structure is tracked in version control. This file is normally blank.
+This explanatory note is for those who are unfamiliar with the .gitkeep file.
+You may delete this note if you wish. It will not effect Git/GitHub functionality.
